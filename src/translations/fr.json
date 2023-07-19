@@ -1,0 +1,46 @@
+{
+  "currency": "€",
+  "previousStep": "Étape précédente",
+  "questions": {
+    "continue": "Continuer"
+  },
+  "solutions": {
+    "title": "Solutions disponibles pour votre projet",
+    "continue": "Continuer"
+  },
+  "synthesis": {
+    "summary": {
+      "title": "Récapitulatif",
+      "idLabel": "N° de simulation : ",
+      "modify": "Modifier"
+    },
+    "status": {
+      "unsaved": "Simulation non sauvegardée",
+      "saving": "Simulation en cours d'enregistrement",
+      "saved": "Simulation enregistrée dans votre <b>compte client</b>",
+      "error": "Erreur lors de l'enregistrement de la simulation"
+    },
+    "totals": {
+      "totalVatIncluded": "Total TTC",
+      "totalVatExcluded": "Total HT",
+      "finalizeInStore": "Finalisez votre projet en magasin",
+      "toVerify": "Pour vérifier votre projet,",
+      "getAQuote": "Obtenir un devis et commander",
+      "saleAssistant": "Le conseiller de vente accédera à votre simulation depuis son ordinateur en magasin",
+      "print": "Imprimer le récapitulatif",
+      "backToPortal": "Retour au portail",
+      "generatePdf": "Générer ce récapitulatif en PDF"
+    },
+    "offers": {
+      "viewDetails": "Voir le détail",
+      "warranty": "Garantie X ans",
+      "20PercentVat": "TVA 20%"
+    },
+    "modal": {
+      "solutions": "Solutions",
+      "complements": "Complémentaires",
+      "tooling": "Outillage",
+      "quantity": "Quantité : "
+    }
+  }
+}
