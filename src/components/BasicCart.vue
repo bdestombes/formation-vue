@@ -2,9 +2,7 @@
   <div
 		class="hello"
 	>
-		<h3>
-			{{ title }}
-		</h3>
+		<h3>{{ title }}</h3>
 
     <h4>
       TVA (en %) <input type="number" v-model="tva" />
@@ -22,7 +20,9 @@
       />
     </div>
 
-    <h3>TOTAL: {{ total }}</h3>
+    <h3
+      v-html="coloredTotal"
+    ></h3>
 	</div>
 </template>
 
@@ -62,6 +62,9 @@ export default {
 	}),
 
 	computed: {
+    coloredTotal() {
+      return `<span style="color: green; text-transform: uppercase;">TOTAL : ${this.total}</span>`;
+    },
 		total() {
       let amount = 0;
       this.products.forEach(product => {
@@ -92,6 +95,7 @@ export default {
     },
     update() {
       this.products = this.$refs['cart-line'].map(line => {
+        console.log('REFerenced component', line);
         const {label, price, quantity} = line;
         return {
           label,

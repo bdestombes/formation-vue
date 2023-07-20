@@ -14,7 +14,6 @@ export default {
 
   mutations: {
     addWish(state, value) {
-      console.log(value);
       state.list.push(value);
     },
     clearList(state) {

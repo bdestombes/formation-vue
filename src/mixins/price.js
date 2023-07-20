@@ -1,12 +1,7 @@
 export default {
-  computed: {
-    taxedPrice() {
-      return this.getPriceWithTva(this.price,this.tva);
-    }
-  },
   methods: {
     getPriceWithTva(price, tva) {
-      return price * (1 + (tva / 100));
+      return Math.round(price * (1 + (tva / 100))).toFixed(2);
     }
   }
 };

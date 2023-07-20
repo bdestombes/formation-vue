@@ -37,6 +37,14 @@ export default {
         path: '/essentials'
       },
       {
+        title: 'Les traductions',
+        path: '/i18n'
+      },
+      {
+        title: 'Les slots',
+        path: '/slots'
+      },
+      {
         title: 'Les routes dynamiques (no param)',
         path: '/routing'
       },

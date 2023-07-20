@@ -4,8 +4,10 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import ApiView from './views/Api.vue';
 import EssentialsView from './views/Essentials.vue';
 import HomeView from './views/Home.vue';
+import I18nView from './views/I18n.vue';
 import RoutingView from './views/Routing.vue';
 import StoreApiView from './views/StoreApi.vue';
+import SlotsView from './views/Slots.vue';
 import StoreView from './views/Store.vue';
 
 const router = createRouter({
@@ -41,6 +43,12 @@ const router = createRouter({
       meta: { title: 'Les Essentiels' }
     },
     {
+      path: '/i18n',
+      name: 'I18n',
+      component: I18nView,
+      meta: { title: 'Les traductions' }
+    },
+    {
       path: '/routing/:id?',
       name: 'Routing',
       component: RoutingView,
@@ -63,6 +71,12 @@ const router = createRouter({
       name: 'StoreApi',
       component: StoreApiView,
       meta: { title: 'Le store Vuex + les appels API' }
+    },
+    {
+      path: '/slots',
+      name: 'Slots',
+      component: SlotsView,
+      meta: { title: 'Le slots Vuex' }
     }
   ],
 });

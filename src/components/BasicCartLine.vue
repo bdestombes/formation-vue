@@ -5,7 +5,7 @@
     </div>
 
     <div class="ml-flexy__col">
-      {{ price }}€ HT | {{ taxedPrice }}€ HT
+      {{ price }}€ HT | {{ taxedPrice }}€ TTC
     </div>
 
     <div class="ml-flexy__col">
@@ -69,6 +69,9 @@ export default {
 	computed: {
     total() {
       return this.quantity * this.taxedPrice;
+    },
+    taxedPrice() {
+      return this.getPriceWithTva(this.price,this.tva);
     }
 	},
 

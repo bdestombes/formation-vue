@@ -1,4 +1,5 @@
 <template>
+  <!-- Préférer un élément unique à l'intérieur de <template> au 1er niveau -->
   <div>
     <div v-if="selectedCustomer.name">
       <h2>
@@ -14,6 +15,8 @@
 
       <br><br>
 
+      <!-- Pour les liens de l'app, éviter <a href="ma-route">, qui va forcer le navigateur à un refresh de page -->
+      <!-- Préférer <router-link to="ma-route"> -->
       <router-link
         v-if="$route.path !== '/'"
         to="/"
@@ -21,6 +24,7 @@
         Retour à l'accueil
       </router-link>
 
+      <!-- Afficher le contenu en provenance des routes -->
       <router-view />
     </div>
 
@@ -58,23 +62,19 @@ export default {
 		customers: [
 			{
 				id: 0,
-				name: 'Ch😜rles',
-				hasLoyalty: false
+				name: 'Ch😜rles'
 			},
 			{
 				id: 1,
-				name: 'K😁vin',
-				hasLoyalty: false
+				name: 'K😁vin'
 			},
 			{
 				id: 2,
-				name: 'Th😎o',
-				hasLoyalty: false
+				name: 'Th😎o'
 			},
 			{
 				id: 3,
-				name: 'B🙄ptiste',
-				hasLoyalty: true
+				name: 'B🙄ptiste'
 			}
 		],
 		selectedCustomerId: -1
@@ -91,10 +91,14 @@ export default {
     }
   },
 
+  created() {
+    console.info('# THIS object in Vue component (created)');
+    console.log(this);
+  },
+
 	methods: {
 		resetCustomer() {
       this.selectedCustomerId = -1;
-		  this.selectedCustomer = {};
     }
 	}
 }

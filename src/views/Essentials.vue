@@ -17,22 +17,14 @@
 </template>
 
 <script>
-import BasicCart from '../components/BasicCart.vue'
+import BasicCart from '../components/BasicCart.vue';
 
 export default {
   name: 'Essentials',
 
   components: {
     BasicCart
-  },
-
-	data: () => ({
-		//
-	}),
-
-	methods: {
-		//
-	}
+  }
 }
 </script>
 
