@@ -30,7 +30,7 @@ export default {
   },
 
   async created() {
-    await this.getAppData();
+    // await this.getAppData();
   },
 
 	data: () => ({

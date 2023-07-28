@@ -3,7 +3,7 @@
 		<h1>Store Vuex - Liste de souhaits</h1>
 
     <wish-list
-      title="Votre liste de souhaits"
+      :title="message"
     />
 	</div>
 </template>
@@ -23,11 +23,15 @@ export default {
   },
 
 	data: () => ({
-		//
+		message: 'Initial message'
 	}),
 
-	methods: {
+  created() {
+    this.message = this.$store.state.message;
+  },
 
+	methods: {
+    //
 	}
 }
 </script>
