@@ -77,8 +77,20 @@ const router = createRouter({
       name: 'Slots',
       component: SlotsView,
       meta: { title: 'Le slots Vuex' }
+    },
+    {
+      path: '/guard',
+      name: 'Guard',
+      meta: { title: 'Guard' , requireAuth: true }
     }
   ],
+});
+
+router.beforeEach((to, _from) => {
+  console.log(to);
+  if (to.meta.requireAuth) {
+    return { name: 'Essentials' };
+  }
 });
 
 router.afterEach((to, _from) => {

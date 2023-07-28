@@ -65,6 +65,10 @@ export default {
         path: '/routing/3'
       },
       {
+        title: 'Navigation Guard',
+        path: '/guard'
+      },
+      {
         title: 'Les appels API',
         path: '/api'
       },
